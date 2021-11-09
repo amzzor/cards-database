@@ -5,6 +5,11 @@ export type Languages<T = string> = Partial<Record<SupportedLanguages, T>>
 export interface Serie {
 	id: string
 	name: Languages
+
+	/**
+	 * Serie Energy cards
+	 */
+	energies?: Array<Types>
 }
 
 interface variants {
@@ -138,7 +143,7 @@ export interface Card {
 	 * - Stage2 https://www.tcgdex.net/database/xy/xy9/3
 	 * - VMAX https://www.tcgdex.net/database/swsh/swsh1/50
 	 */
-	stage?: 'Basic' | 'BREAK' | 'LEVEL-UP' | 'MEGA' | 'RESTORED' | 'Stage1' | 'Stage2' | 'VMAX'
+	stage?: 'Basic' | 'BREAK' | 'LEVEL-UP' | 'MEGA' | 'RESTORED' | 'Stage1' | 'Stage2' | 'VMAX' | 'V-UNION'
 
 	/**
 	 * Card Suffix
